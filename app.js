@@ -42,7 +42,7 @@ app.delete('/todos/:id', async( req, res) => {
     res.redirect('/')
 })
 
-port = process.env.port || 4000
+port = process.env.PORT || 4000
 
 app.listen(port, () => {
     console.log("port = " + port)

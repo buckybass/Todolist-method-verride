@@ -42,19 +42,8 @@ app.delete('/todos/:id', async( req, res) => {
     res.redirect('/')
 })
 
-//   app.put('/todos/:id', async (req, res) => {
-//     const list = await List.findById(req.params.id)
-//     list.text = req.body.text
-//     await list.save()
-//     res.redirect('/')
-//   })
-  
-//   app.delete('/todos/:id', async (req, res) => {
-//     const list = await List.findById(req.params.id)
-//     await list.remove()
-//     res.redirect('/')
-//   })
+port = process.env.port || 4000
 
-app.listen(4000, () => {
-    console.log("port = 4000")
+app.listen(port, () => {
+    console.log("port = " + port)
 })

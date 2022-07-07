@@ -45,5 +45,5 @@ app.delete('/todos/:id', async( req, res) => {
 port = process.env.PORT || 4000
 
 app.listen(port, () => {
-    console.log("port = " + port)
+    console.log("http://localhost:" + port)
 })

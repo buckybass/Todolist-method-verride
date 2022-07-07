@@ -6,8 +6,8 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         title Document
-    body 
-      .container    
+    body.bg-dark.text-light
+      .container 
         .row.justify-content-center
           .col-12.col-md-6
             h1 Todo list
@@ -44,8 +44,9 @@ html(lang="en")
               .card.mt-3
                 .card-body
                   form(action="/todos", method="post") 
-                    input.form-control(type="text" name='text' placeholder='สิ่งที่ต้องทำ' required)
-                    button.btn.btn-primary.mt-3 เพิ่มรายการ
+                    .input-group
+                      input.form-control(type="text" name='text' placeholder='สิ่งที่ต้องทำ' required)
+                      button.btn.btn-primary เพิ่มรายการ
         script.
           function editList (event) {
             const parent = event.target.parentNode
